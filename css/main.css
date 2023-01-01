@@ -1,0 +1,741 @@
+/*================================== Media Queries ============================*/
+/*================================== Fonts =====================================*/
+/*================================== Colors =====================================*/
+/*================================== Center Our Content ===========================*/
+.row {
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 75em) {
+  .row {
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  .row {
+    max-width: 80rem;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .row {
+    max-width: 55rem;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 24em) {
+  .row {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+}
+
+/*================================== Basic Styling =====================================*/
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #999999;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h1, h2, h3, h4, h5 {
+  color: #F0f0f0;
+}
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 43.75%;
+  }
+}
+
+@media only screen and (max-width: 24em) {
+  html {
+    font-size: 37.5%;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  color: #999999;
+  line-height: 1.6;
+  background-color: #141414;
+}
+
+/*================================== Header Starts Here =====================================*/
+.header {
+  height: 100vh;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .header {
+    height: 90vh;
+  }
+}
+
+.header__hero {
+  -webkit-transform: translateY(6rem);
+          transform: translateY(6rem);
+  position: relative;
+}
+
+.header__hero--photo {
+  max-width: 100%;
+  height: 60vh;
+  position: relative;
+  z-index: -1;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .header__hero--photo {
+    height: 50vh;
+  }
+}
+
+.header__hero--img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+
+.header__hero--overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.header__text {
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: 2rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .header__text {
+    font-size: 2rem;
+  }
+}
+
+/*================ Form ================*/
+.form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.form__input {
+  display: inline-block;
+  padding: 1.3rem 15rem;
+  max-width: 70%;
+  outline: none;
+  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  -webkit-box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+          box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.form__input:placeholder-shown {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: yellowgreen;
+}
+
+.form__footer {
+  position: initial;
+  -webkit-transform: translate(27rem, -7rem);
+          transform: translate(27rem, -7rem);
+}
+
+@media only screen and (max-width: 56.25em) {
+  .form__footer {
+    -webkit-transform: translate(15rem, -7rem);
+            transform: translate(15rem, -7rem);
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .form__footer {
+    -webkit-transform: translate(3rem, -7rem);
+            transform: translate(3rem, -7rem);
+  }
+}
+
+/*================ Logo ================*/
+.logo {
+  font-size: 2rem;
+  color: #e9e9e9;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .logo {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .logo {
+    font-size: 3rem;
+  }
+}
+
+/*================ Navigation Starts ================*/
+.nav {
+  padding: 2rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .nav {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .nav__list {
+    margin-top: 2rem;
+  }
+}
+
+.nav__list *:not(:last-child) {
+  margin-right: 2rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .nav__list *:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .nav__list {
+    display: none;
+  }
+}
+
+.nav__item {
+  display: inline-block;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .nav__item {
+    display: block;
+    text-align: center;
+  }
+}
+
+.nav__link {
+  font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 56.25em) {
+  .nav__link {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  .nav__link {
+    font-size: 3rem;
+  }
+}
+
+.nav__link:hover {
+  color: #FDC286;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.nav__call--text {
+  font-size: 1.4rem;
+}
+
+.nav__call--number {
+  font-size: 1.6rem;
+  color: #e9e9e9;
+}
+
+/*================ Navigation Ends ================*/
+/*================ Icons Starts ================*/
+.icon__menu {
+  display: none;
+  font-size: 3rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .icon__menu {
+    display: block;
+  }
+}
+
+/*================ Icons Ends ================*/
+/*================ Button Starts ================*/
+.btn {
+  display: inline-block;
+  padding: .8rem 1.5rem;
+}
+
+.btn__primary {
+  background-color: #FDC286;
+  color: #141414;
+  border: 1px solid #FDC286;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+.btn__primary:hover {
+  color: #141414;
+  background-color: #e9e9e9;
+  border: 1px solid #FDC286;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.btn__light {
+  color: #e9e9e9;
+  border: 1px solid #e9e9e9;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+.btn__light:hover {
+  color: #e9e9e9;
+  background-color: #e9e9e9;
+  border: 1px solid #e9e9e9;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+/*================ Button Ends ================*/
+/*================ Navigation Ends ================*/
+/*================ Headings start ================*/
+.heading-primary {
+  font-size: 5.5rem;
+  line-height: 1;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: .5rem;
+  -webkit-transform: translateY(1rem);
+          transform: translateY(1rem);
+}
+
+@media only screen and (max-width: 56.25em) {
+  .heading-primary {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+}
+
+.heading-secondary {
+  font-size: 5rem;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.heading-secondary__about {
+  text-align: center;
+  color: #efefef;
+  text-transform: uppercase;
+  margin-bottom: -1rem;
+}
+
+.heading-secondary__watch {
+  text-align: center;
+  margin-bottom: 4rem;
+  color: inherit;
+}
+
+.heading-secondary__product {
+  margin-bottom: 4rem;
+}
+
+.heading-tertiary {
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 400;
+}
+
+.heading-tertiary__listings {
+  margin-bottom: 2rem;
+}
+
+.heading-4 {
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 400;
+  color: #efefef;
+  text-align: center;
+  -webkit-transform: translateY(-14rem);
+          transform: translateY(-14rem);
+}
+
+@media only screen and (max-width: 37.5em) {
+  .heading-4 {
+    font-size: 3rem;
+  }
+}
+
+/*================ Headings Ends ================*/
+/*================================== Header Ends Here =====================================*/
+/*================================== Section About Starts Here =====================================*/
+.about {
+  padding: 10rem 0 5rem 0;
+  color: #88848E;
+}
+
+.about__flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5rem 0;
+  background: -webkit-gradient(linear, left top, right bottom, from(#1a1a1a), color-stop(#1b1b1b), to(#1c1c1c));
+  background: linear-gradient(to right bottom, #1a1a1a, #1b1b1b, #1c1c1c);
+}
+
+@media only screen and (max-width: 37.5em) {
+  .about__flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.about__photo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.about__textbox {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 5vw 0 0;
+}
+
+.about__textbox--para {
+  font-size: 1.6rem;
+  margin-bottom: 4rem;
+}
+
+.about__textbox--para-underline {
+  text-decoration: underline;
+}
+
+.about__textbox--contact {
+  font-size: 2rem;
+  color: #efefef;
+  margin-bottom: 2rem;
+}
+
+.about__textbox--grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+}
+
+.about__textbox--grid-heading {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .about__textbox--grid-heading {
+    font-size: 1.5rem;
+  }
+}
+
+.about__textbox--grid-detail {
+  font-size: 1.4rem;
+  color: #efefef;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .about__textbox--grid-detail {
+    font-size: 1.8rem;
+  }
+}
+
+/*================================== Section About Ends Here =====================================*/
+/*================================== Section gallery starts Here =====================================*/
+.gallery {
+  padding: 5rem 0;
+}
+
+.gallery__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(35rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  grid-gap: 2rem;
+}
+
+.gallery__grid--item {
+  position: relative;
+}
+
+.gallery__grid--item-photo {
+  position: relative;
+}
+
+.gallery__grid--item-photo-img {
+  display: block;
+}
+
+.gallery__grid--item-photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.gallery__grid--item-textbox {
+  position: absolute;
+  bottom: 2rem;
+  left: 2rem;
+}
+
+.gallery__grid--item-textbox-heading {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .gallery__grid--item-textbox-heading {
+    font-size: 2rem;
+  }
+}
+
+.gallery__grid--item-textbox-detail {
+  font-size: 1.6rem;
+  color: #efefef;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .gallery__grid--item-textbox-detail {
+    font-size: 3rem;
+  }
+}
+
+/*================================== Section gallery Ends Here =====================================*/
+/*================================== Section Listings starts Here =====================================*/
+.listings {
+  padding: 10rem 0 5rem 0;
+}
+
+.listings__item {
+  background: -webkit-gradient(linear, left top, right bottom, from(#1a1a1a), color-stop(#1b1b1b), to(#1c1c1c));
+  background: linear-gradient(to right bottom, #1a1a1a, #1b1b1b, #1c1c1c);
+}
+
+.listings__item--1 {
+  margin-bottom: 4rem;
+}
+
+.listings__item--2 {
+  margin-bottom: 4rem;
+}
+
+.listings__item--flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .listings__item--flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.listings__item--photo {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+  position: relative;
+}
+
+.listings__item--photo-img {
+  display: block;
+}
+
+.listings__item--photo-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.listings__item--textbox {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 5vw;
+}
+
+.listings__item--textbox-sale {
+  text-transform: uppercase;
+  color: #FDC286;
+  font-size: 1.4rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .listings__item--textbox-sale {
+    font-size: 2rem;
+  }
+}
+
+.listings__item--textbox-price {
+  color: #efefef;
+  font-size: 3rem;
+  margin-bottom: 4rem;
+}
+
+.listings__item--textbox-text {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+}
+
+.listings__item--textbox-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(10rem, max-content))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(10rem, -webkit-max-content));
+      grid-template-columns: repeat(auto-fit, minmax(10rem, max-content));
+}
+
+.listings__item--textbox-grid-heading {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .listings__item--textbox-grid-heading {
+    font-size: 1.6rem;
+  }
+}
+
+.listings__item--textbox-grid-detail {
+  font-size: 1.6rem;
+  color: #efefef;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .listings__item--textbox-grid-detail {
+    font-size: 1.6rem;
+  }
+}
+
+.listings__item--textbox-more {
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  margin-top: 4rem;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 37.5em) {
+  .listings__item--textbox-more {
+    font-size: 2rem;
+  }
+}
+
+.listings__item--textbox-more:hover {
+  color: #FDC286;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+/*================================== Section Listings Ends Here =====================================*/
+.footer {
+  padding: 10rem 0 0 0;
+  margin: 5rem 0 0 0;
+  background: -webkit-gradient(linear, left top, right bottom, from(#1a1a1a), color-stop(#1b1b1b), to(#1c1c1c));
+  background: linear-gradient(to right bottom, #1a1a1a, #1b1b1b, #1c1c1c);
+}
+
+.footer__text {
+  font-size: 1.6rem;
+  text-align: center;
+  -webkit-transform: translateY(-12rem);
+          transform: translateY(-12rem);
+}
+
+@media only screen and (max-width: 37.5em) {
+  .footer__text {
+    font-size: 2rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,564 @@
+/*================================== Media Queries ============================*/
+$bp-smallest: 24em; // for 375px
+$bp-small: 37.5em; // for 600px
+$bp-medium: 56.25em; // for 900px
+$bp-large: 75em; // for 1200px
+$bp-largest: 112.5em; // for 1800px
+
+/*================================== Fonts =====================================*/
+$font-primary: 'Poppins', sans-serif;
+
+/*================================== Colors =====================================*/
+
+$color-white: #fff;
+$color-black: #000;
+$color-background: #141414;
+$color-box-1: #1a1a1a;
+$color-box-2: #1b1b1b;
+$color-box-3: #1c1c1c;
+$color-heading-primary: #F0f0f0;
+$color-about: #88848E;
+$color-headings: #efefef;
+$color-primary: #FDC286;
+$color-body: #999999;
+$color-light: #e9e9e9;
+
+
+
+
+/*================================== Center Our Content ===========================*/
+
+.row{
+    max-width: 114rem;
+    margin: 0 auto;
+    @media only screen and (max-width: $bp-large){
+        max-width: 100rem;
+        margin: 0 auto;
+    }
+    @media only screen and (max-width: $bp-medium){
+        max-width: 80rem;
+        margin: 0 auto;
+    }
+    @media only screen and (max-width: $bp-small){
+        max-width: 55rem;
+        margin: 0 auto;
+    }
+    @media only screen and (max-width: $bp-smallest){
+        max-width: 50rem;
+        margin: 0 auto;
+    }
+}
+/*================================== Basic Styling =====================================*/
+
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: $color-body;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+h1,h2,h3,h4,h5{
+    color: $color-heading-primary;
+}
+
+*,
+*:before,
+*:after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+    @media only screen and (max-width: $bp-large){
+        font-size: 56.25%; //9rem
+    }
+    @media only screen and (max-width: $bp-medium){
+        font-size: 50%; //8rem
+    }
+    @media only screen and (max-width: $bp-small){
+        font-size: 43.75%;//7rem
+    }
+    @media only screen and (max-width: $bp-smallest){
+        font-size: 37.5%; //6rem
+    }
+    
+}
+body{
+    font-family: $font-primary;
+    font-weight: 400;
+    color: $color-body;
+    line-height: 1.6;
+    background-color: $color-background;
+}
+
+/*================================== Header Starts Here =====================================*/
+.header{
+    height: 100vh;
+    @media only screen and (max-width: $bp-medium){
+        height: 90vh;
+    }
+    &__navigation{
+
+    }
+    &__hero{
+        transform: translateY(6rem);
+        position: relative;
+        &--photo{
+            max-width: 100%;
+            height: 60vh;
+            position: relative;
+            z-index: -1;
+            @media only screen and (max-width: $bp-small){
+                height: 50vh;
+            }
+        }
+        &--img{
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: fill;
+            
+        }
+        &--overlay{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color-black, .7);
+        }
+    }
+    &__text{
+        text-align: center;
+        font-size: 1.6rem;
+        margin-top: 2rem;
+        @media only screen and (max-width: $bp-medium){
+            font-size: 2rem;
+        }
+    }
+}
+/*================ Form ================*/
+.form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    &__group{
+
+    }
+    &__input{
+        display: inline-block;
+        padding: 1.3rem 15rem;
+        max-width: 70%;
+        outline: none;
+        border: none;
+        background: rgba( 255, 255, 255, 0.05 );
+        box-shadow: 0 8px 32px 0 rgba($color-black, 0.37 );
+        backdrop-filter: blur( 2.0px );
+        -webkit-backdrop-filter: blur( 2.0px );
+        border: 1px solid rgba( 255, 255, 255, 0.18 );
+        &:placeholder-shown{
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            color: yellowgreen;
+        }
+    }
+    &__footer{
+        position: initial;
+        transform: translate(27rem, -7rem);
+        @media only screen and (max-width: $bp-medium){
+            transform: translate(15rem, -7rem);
+        }
+        @media only screen and (max-width: $bp-small){
+            transform: translate(3rem, -7rem);
+        }
+    }
+}
+
+/*================ Logo ================*/
+.logo{
+    font-size: 2rem;
+    color: $color-light;
+    @media only screen and (max-width: $bp-medium){
+        font-size: 3rem;
+    }
+    @media only screen and (max-width: $bp-small){
+        font-size: 3rem;
+    }
+}
+/*================ Navigation Starts ================*/
+.nav{
+    padding: 2rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media only screen and (max-width: $bp-small){
+        align-items: flex-start;
+    }
+    &__list{
+        @media only screen and (max-width: $bp-small){
+            margin-top: 2rem;
+        }
+        & *:not(:last-child){
+            margin-right: 2rem;
+            @media only screen and (max-width: $bp-small){
+                margin-bottom: 1rem;
+            }
+        }
+        @media only screen and (max-width: $bp-small){
+            display: none;
+        }
+    }
+    &__item{
+        display: inline-block;
+        @media only screen and (max-width: $bp-small){
+            display: block;
+            text-align: center;
+        }
+    }
+    &__link{
+        font-size: 1.6rem;
+        @media only screen and (max-width: $bp-medium){
+            font-size: 2rem;
+        }
+        @media only screen and (max-width: $bp-small){
+            font-size: 3rem;
+        }
+        &:hover{
+            color: $color-primary;
+            transition: all .2s;
+        }
+    }
+    &__call{
+        &--text{
+            font-size: 1.4rem;
+        }
+        &--number{
+            font-size: 1.6rem;
+            color: $color-light;
+        }
+    }
+}
+/*================ Navigation Ends ================*/
+
+/*================ Icons Starts ================*/
+.icon{
+    &__menu{
+        display: none;
+        font-size: 3rem;
+        @media only screen and (max-width: $bp-small){
+            display: block;
+        }
+    }
+}
+/*================ Icons Ends ================*/
+
+/*================ Button Starts ================*/
+.btn{
+    display: inline-block;
+    padding: .8rem 1.5rem;
+    &__primary{
+        background-color: $color-primary;
+        color: $color-background;
+        border: 1px solid $color-primary;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        &:hover{
+            color: $color-background;
+            background-color: $color-light;
+            border: 1px solid $color-primary;
+            transition: all .5s;
+        }
+    }
+    &__light{
+        color: $color-light;
+        border: 1px solid $color-light;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+        &:hover{
+            color: $color-light;
+            background-color: $color-light;
+            border: 1px solid $color-light;
+            transition: all .5s;
+        }
+    }
+}
+/*================ Button Ends ================*/
+
+/*================ Navigation Ends ================*/
+
+/*================ Headings start ================*/
+.heading-primary{
+    font-size: 5.5rem;
+    line-height: 1;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: .5rem;
+    transform: translateY(1rem);
+    @media only screen and (max-width: $bp-medium){
+        font-size: 4rem;
+        margin-bottom: 2rem;
+    }
+    
+}
+.heading-secondary{
+    font-size: 5rem;
+    line-height: 1;
+    font-weight: 400;
+    &__about{
+        text-align: center;
+        color: $color-headings;
+        text-transform: uppercase;
+        margin-bottom: -1rem;
+    }
+    &__watch{
+        text-align: center;
+        margin-bottom: 4rem;
+        color: inherit;
+    }
+    &__product{
+        margin-bottom: 4rem;
+    }
+}
+.heading-tertiary{
+    font-size: 4rem;
+    line-height: 1;
+    font-weight: 400;
+    &__listings{
+        margin-bottom: 2rem;
+    }
+}
+.heading-4{
+    font-size: 4rem;
+    line-height: 1;
+    font-weight: 400;
+    color: $color-headings;
+    text-align: center;
+    transform: translateY(-14rem);
+    @media only screen and (max-width: $bp-small){
+        font-size: 3rem;
+    }
+}
+/*================ Headings Ends ================*/
+
+/*================================== Header Ends Here =====================================*/
+
+/*================================== Section About Starts Here =====================================*/
+.about{
+    padding: 10rem 0 5rem 0;
+    color: $color-about;
+    &__flex{
+        display: flex;
+        align-items: center;
+        padding: 5rem 0;
+        background: linear-gradient(to right bottom, $color-box-1, $color-box-2, $color-box-3);
+        @media only screen and (max-width: $bp-small){
+            flex-direction: column;
+        }
+    }
+    &__photo{
+        flex: 0 0 50%;
+        &--img{
+
+        }
+    }
+    &__textbox{
+        flex: 1;
+        padding: 0 5vw 0 0;
+        &--para{
+            font-size: 1.6rem;
+            margin-bottom: 4rem;
+            &-underline{
+                text-decoration: underline;
+            }
+        }
+        &--contact{
+            font-size: 2rem;
+            color: $color-headings;
+            margin-bottom: 2rem;
+        }
+        &--grid{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+            &-item{
+
+            }
+            &-heading{
+                font-size: 1.2rem;
+                text-transform: uppercase;
+                @media only screen and (max-width: $bp-small){
+                    font-size: 1.5rem;
+                }
+            }
+            &-detail{
+                font-size: 1.4rem;
+                color: $color-headings; 
+                @media only screen and (max-width: $bp-small){
+                    font-size: 1.8rem;
+                } 
+            }
+        }
+    }
+}
+/*================================== Section About Ends Here =====================================*/
+
+/*================================== Section gallery starts Here =====================================*/
+.gallery{
+    padding: 5rem 0;
+    &__grid{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+        grid-gap: 2rem;
+        &--item{
+            position: relative;
+            &-photo{
+                position: relative;
+                &-img{
+                    display: block;
+                }
+                &-overlay{
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba($color-black, .6);
+                }
+            }
+            &-textbox{
+                position: absolute;
+                bottom: 2rem;
+                left: 2rem;
+                &-heading{
+                    font-size: 1.4rem;
+                    text-transform: uppercase;
+                    @media only screen and (max-width: $bp-small){
+                        font-size: 2rem;
+                    }
+                }
+                &-detail{
+                    font-size: 1.6rem;
+                    color: $color-headings;
+                    @media only screen and (max-width: $bp-small){
+                        font-size: 3rem;
+                    }
+                }
+            }
+        }
+    }
+}
+/*================================== Section gallery Ends Here =====================================*/
+
+/*================================== Section Listings starts Here =====================================*/
+.listings{
+    padding: 10rem 0 5rem 0;
+    &__item{
+        background: linear-gradient(to right bottom, $color-box-1, $color-box-2, $color-box-3);
+        &--1{
+            margin-bottom: 4rem;
+        }
+        &--2{
+            margin-bottom: 4rem;
+        }
+        &--flex{
+            display: flex;
+            align-items: center;
+            @media only screen and (max-width: $bp-small){
+                flex-direction: column;
+            }
+        }
+        &--photo{
+            flex: 0 0 40%;
+            position: relative;
+            &-img{
+                display: block;
+                // max-width: 60%;
+            }
+            &-overlay{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba($color-black, .6);
+            }
+        }
+        &--textbox{
+            flex: 1;
+            padding: 0 5vw;
+            &-sale{
+                text-transform: uppercase;
+                color: $color-primary;
+                font-size: 1.4rem;
+                @media only screen and (max-width: $bp-small){
+                    font-size: 2rem;
+                }
+            }
+            &-price{
+                color: $color-headings;
+                font-size: 3rem;
+                margin-bottom: 4rem;
+            }
+            &-text{
+                font-size: 1.6rem; 
+                margin-bottom: 2rem;
+            }
+            &-grid{
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(10rem, max-content));
+                &-item{
+                    
+                }
+                &-heading{
+                    font-size: 1.4rem;
+                    text-transform: uppercase;
+                    @media only screen and (max-width: $bp-small){
+                        font-size: 1.6rem;
+                    }
+                }
+                &-detail{
+                    font-size: 1.6rem;
+                    color: $color-headings;
+                    @media only screen and (max-width: $bp-small){
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+            &-more{
+                text-transform: uppercase;
+                font-size: 1.6rem;
+                margin-top: 4rem;
+                cursor: pointer;
+                @media only screen and (max-width: $bp-small){
+                    font-size: 2rem;
+                }
+                &:hover{
+                    color: $color-primary;
+                    transition: all .2s;
+                }
+            }
+        }
+    }
+    
+}
+/*================================== Section Listings Ends Here =====================================*/
+.footer{
+    padding: 10rem 0 0 0;
+    margin: 5rem 0 0 0;
+    background: linear-gradient(to right bottom, $color-box-1, $color-box-2, $color-box-3);
+    &__text{
+        font-size: 1.6rem;
+        text-align: center;
+        transform: translateY(-12rem);
+        @media only screen and (max-width: $bp-small){
+            font-size: 2rem;
+        }
+    }
+}
